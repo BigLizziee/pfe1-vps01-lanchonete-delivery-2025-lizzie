@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanchonete Delivery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Pedidos</h1>
+        <form id="pedidoForm">
+            <input type="text" id="clienteNome" placeholder="Nome do Cliente" required>
+            <input type="text" id="endereco" placeholder="Endereço de Entrega" required>
+            <select id="produtoSelect" required>
+                <option value="">Selecionar um Produto</option>
+            </select>
+            <button type="button" id="mostrarResumo">Mostrar Resumo</button>
+            <button type="button" id="cadastrarPedido">Cadastrar Pedido</button>
+        </form>
+
+    
+        <div id="resumoPedido" style="display: none;">
+            <h2>Resumo do Pedido</h2>
+            <p><strong>Nome:</strong> <span id="resumoNome"></span></p>
+            <p><strong>Endereço:</strong> <span id="resumoEndereco"></span></p>
+            <p><strong>Produto:</strong> <span id="resumoProduto"></span></p>
+            <p><strong>Preço:</strong> <span id="resumoPreco"></span></p>
+            <p><strong>Data e Hora:</strong> <span id="resumoDataHora"></span></p>
+            <img id="resumoImagem" src="" alt="Imagem do produto" style="max-width: 200px;">
+        </div>
+        
+        <h2>Pedidos em Execução</h2>
+        <div id="pedidosEmExecucao" class="card-container"></div>
+
+        <h2>Pedidos em Entrega</h2>
+        <div id="pedidosEmEntrega" class="card-container"></div>
+
+        <h2>Pedidos Finalizados</h2>
+        <div id="pedidosFinalizados" class="card-container"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
